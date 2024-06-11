@@ -1,0 +1,13 @@
+.text {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: start;
+}
+.filter {
+  width: 294px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid #3b3b3b;
+  margin-bottom: 12px;
+}
