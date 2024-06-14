@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { addContact, deleteContact, fetchContacts } from "./operations";
 
-const contactsSlise = createSlice({
+const contactsSlice = createSlice({
   name: "contacts",
   initialState: {
     items: [],
@@ -43,4 +43,4 @@ const contactsSlise = createSlice({
   },
 });
 
-export const contactsReducer = contactsSlise.reducer;
+export const contactsReducer = contactsSlice.reducer;

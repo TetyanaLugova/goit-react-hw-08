@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  gap: 8px;
+}
+.username {
+  color: #f8d68c;
+}
+.btn {
+  color: #f18f0e;
+  border: none;
+  background-color: inherit;
+}

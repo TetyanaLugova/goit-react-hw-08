@@ -15,7 +15,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #ffbf60;
   text-decoration: inherit;
 }
 a:hover {
@@ -28,6 +28,11 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #213547;
+  color: antiquewhite;
+  justify-content: center;
+  align-items: start;
+  padding: 32px;
 }
 
 h1 {

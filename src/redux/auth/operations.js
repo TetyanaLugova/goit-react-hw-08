@@ -15,10 +15,12 @@ export const register = createAsyncThunk(
   "auth/register",
   async (newUser, thunkAPI) => {
     try {
+      console.log("Registering user with data:", newUser); // Логування даних
       const res = await axios.post("/users/signup", newUser);
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
+      console.error("Error registering user:", error.message); //логування
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -45,3 +47,20 @@ export const logOut = createAsyncThunk("auth/logout", async (_, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.message);
   }
 });
+
+export const refreshUser = createAsyncThunk(
+  "auth/refresh",
+  async (_, thunkAPI) => {
+    const reduxState = thunkAPI.getState();
+    setAuthHeader(reduxState.auth.token);
+
+    const res = await axios.get("/users/current");
+    return res.data;
+  },
+  {
+    condition(_, thunkAPI) {
+      const reduxState = thunkAPI.getState();
+      return reduxState.auth.token !== null;
+    },
+  }
+);

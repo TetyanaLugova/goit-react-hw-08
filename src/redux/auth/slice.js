@@ -33,4 +33,4 @@ const authSlice = createSlice({
         state.isLoggedIn = false;
       }),
 });
-export const authReducer = authSlise.reducer;
+export const authReducer = authSlice.reducer;
