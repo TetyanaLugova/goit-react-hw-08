@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { ErrorMessage } from "formik";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
-import css from "./RegisterForm.module.css";
+import css from "./registerForm.module.css";
 import { useId } from "react";
 import { toast } from "react-toastify";
 
